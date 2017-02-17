@@ -24,7 +24,7 @@ The Freight configuration is a `source`d shell script that defines a few importa
 * `GPG_PASSPHRASE_FILE`:
   Pathname of a file containing the GPGP private key's passphrase.  This sets the `--passphrase-fd` and `--passphrase-file` options to `gpg`(1).  The passphrase file can be set either in a configuration file or by using the `-p` option to `freight-cache`(1).
 * `GPG_DIGEST_ALGO`:
-  Message digest algorithm that GPG should use to sign the repository. Apt is phasing out SHA1 so it is recommended to use SHA512 for most use-cases.  This sets the `--personal-digest-preferences` option to `gpg`(1).  The digest algorithm can be set either in a configuration file or by using the `-a` option to `freight-cache`(1).
+  Message digest algorithm that GPG should use to sign the repository. Apt is phasing out SHA1 so it is recommended to use SHA512 for most use-cases.  This sets the `--personal-digest-preferences` option to `gpg`(1).  The digest algorithm can be set either in a configuration file or by using the `-a` option to `freight-cache`(1). This value defaults to SHA512.
 * `SYMLINKS`:
   _on_ to follow symbolic links in `VARLIB` to produce extra components in the cache directory or _off_ to offer no special treatment.
 
