@@ -2,24 +2,24 @@
 
 # Default directories for the Freight library and Freight cache.  Your
 # web server's document root should be `$VARCACHE`.
-VARLIB="/var/lib/freight"
-VARCACHE="/var/cache/freight"
+VARLIB=${VARLIB:-"/var/lib/freight"}
+VARCACHE=${VARCACHE:-"/var/cache/freight"}
 
 # Default architectures.
 # shellcheck disable=SC2034
-ARCHS="i386 amd64"
+ARCHS=${ARCHS:-"i386 amd64"}
 
 # Default `Origin` and `Label` fields for `Release` files.
 # shellcheck disable=SC2034
-ORIGIN="Freight"
+ORIGIN=${ORIGIN:-"Freight"}
 # shellcheck disable=SC2034
-LABEL="Freight"
+LABEL=${LABEL:-"Freight"}
 
 # shellcheck disable=SC2034
-CACHE="off"
+CACHE=${CACHE:-"off"}
 
 # shellcheck disable=SC2034
-SYMLINKS="off"
+SYMLINKS=${SYMLINKS:-"off"}
 
 # If a configuration file is specified, use that exclusively
 if [ "$CONF" ]
